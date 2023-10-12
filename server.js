@@ -5,12 +5,8 @@ const postsRoute = require("./routers/posts");
 const userRoute = require("./routers/users");
 const cors = require("cors");
 
-app.use((req, res, next) => {
-    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
-    next();
-  });
-
 require("dotenv").config();
+
 const PORT = process.env.PORT || 10000;
 
 app.use(cors());
